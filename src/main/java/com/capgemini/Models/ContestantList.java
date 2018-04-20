@@ -5,7 +5,10 @@ import java.util.List;
 
 public class ContestantList {
 
-    private List<Contestant> contestantList = new ArrayList<>();
+
+    //Public static omdat ik de lijst overal will accessen en over alle .java files dezelfde waarde moet blijven
+    //niet dat waardes in een lijst bijv 10 is in ContestantList.java en 5 in ArenaController
+    public static List<Contestant> contestantList = new ArrayList<>();
 
         //generate 18 DistrictContestants
       ///  DistrictContestant districtContestant1 = new DistrictContestant(true, "Man", 1,1,5,1,0);
@@ -14,16 +17,17 @@ public class ContestantList {
     public void fillContestantList() {
 
         // Build 18 DistrictContesters
-        for (int i=0 ; i<18 ; i++) {
-            DistrictContestant districtContestant = new DistrictContestant("District", true, "Man", 1,1,5,1,0);
+        for (int i = 0; i < 18; i++) {
+            DistrictContestant districtContestant = new DistrictContestant("District", true, "Man", 1, 1, 5, 1, 0);
             contestantList.add(districtContestant);
         }
-        for (int i = 0 ; i<6 ; i++) {
-            CareerContestant careerContestant = new CareerContestant("Career",true, "Man",1,1,5,1,0);
+        for (int i = 0; i < 6; i++) {
+            CareerContestant careerContestant = new CareerContestant("Career", true, "Man", 1, 1, 5, 1, 0);
             contestantList.add(careerContestant);
         }
         printContestantList();
     }
+
 
     public void printContestantList(){
         int indexNumber = 1;
